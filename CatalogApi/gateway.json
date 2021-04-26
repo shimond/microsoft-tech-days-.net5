@@ -1,0 +1,19 @@
+{
+  "gateway": {
+    "DownstreamPathTemplate": "/Video/{everything}",
+    "DownstreamScheme": "http",
+    "DownstreamHostAndPorts": [
+      {
+        "Host": "videostreamservice1",
+        "Port": 80
+      },
+      {
+        "Host": "videostreamservice2",
+        "Port": 80
+      }
+    ],
+    "UpstreamPathTemplate": "/api/stream-video/{everything}",
+    "UpstreamHttpMethod": [ "Get", "POST", "PUT", "DELETE" ],
+    "SwaggerKey": "videoswagger"
+  }
+}
